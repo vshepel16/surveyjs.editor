@@ -5,8 +5,15 @@
     .svd_toolbox_title {
       text-transform: uppercase;
       font-weight: 600;
-      padding-top: 5px;
-      padding-bottom: 10px;
+      padding: 1.4em;
+      border-width: 0;
+      border-bottom-width: 1px;
+      border-style: solid;
+    }
+    .svd_toolbox_items {
+      padding: 1.4em;
+      height: 75vh;
+      overflow-y: scroll;
     }
     .svd_toolbox_item {
       padding: 8px;

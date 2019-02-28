@@ -6,7 +6,7 @@ import { StylesManager } from "./stylesmanager";
 
 export interface ISurveyObjectMenuItem {
   name: string;
-  text: string;
+  text: string; 
   onClick: (obj: Survey.Base) => any;
   icon?: string | (() => string);
   hasTitle?: boolean;
@@ -307,7 +307,6 @@ export function applyAdornerClass(classes, adornerClass) {
   if (!!adornerClass) {
     result = !!result ? result + " " + adornerClass : adornerClass;
   }
-
   return result;
 }
 

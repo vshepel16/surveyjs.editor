@@ -607,6 +607,7 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
 
   koIsShowDesigner: any;
   koViewType: any;
+  koSidebarViewType: any;
   koCanDeleteObject: any;
   koObjects: any;
   koSelectedObject: KnockoutObservable<any>;
@@ -660,8 +661,10 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
     window["sel"] = this.koSelectedObject;
     this.koSelectedObject = ko.observable();
     this.koSelectedObject.subscribe(function(newValue) {
+      self.koSidebarViewType("properties");
       self.selectedObjectChanged(newValue != null ? newValue.value : null);
     });
+
     this.koGenerateValidJSON.subscribe(function(newValue) {
       if (!self.options) self.options = {};
       self.options.generateValidJSON = newValue;
@@ -681,6 +684,7 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
     this.selectPage = (page: Survey.PageModel) => {
       this.surveyObjects.selectObject(page);
     };
+
     this.undoRedo = new SurveyUndoRedo();
 
     this.selectedObjectEditorValue = new SurveyObjectEditor(this);
@@ -744,6 +748,8 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
     );
 
     this.koViewType = ko.observable("designer");
+    this.koSidebarViewType = ko.observable("properties");
+
     this.koIsShowDesigner = ko.computed(function() {
       return self.koViewType() == "designer";
     });
@@ -766,6 +772,9 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
       self.doClickToolboxItem(item.json);
     };
     this.dragEnd = function(item, e) {
+      // console.log(item)
+      console.log(self.dragDropHelper.end())
+      console.log(self.dragDropHelper)
       self.dragDropHelper.end();
     };
 
@@ -823,6 +832,29 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
           action: () => this.showTranslationEditor()
         });
       }
+
+      this.tabsSideBar([]);
+      this.tabsSideBar.push({
+        name: "properties",
+        title: 'Properties',
+        template: "se-sidebar-tab-properties",
+        data: this,
+        action: () => this.showPropertiesEditor()
+      });
+      this.tabsSideBar.push({
+        name: "toolbox",
+        title: 'ToolBox',
+        template: "se-sidebar-tab-toolbox",
+        data: this,
+        action: () => this.showToolbox()
+      });
+      this.tabsSideBar.push({
+        name: "library",
+        title: 'Library',
+        template: "se-sidebar-tab-library",
+        data: this,
+        action: () => this.showLibrary()
+      });
     });
 
     if (renderedElement) {
@@ -834,7 +866,20 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
     this.addToolbarItems();
   }
 
+  public showPropertiesEditor() {
+    this.koSidebarViewType("properties");
+  }
+
+  public showToolbox() {
+    this.koSidebarViewType("toolbox");
+  }
+
+  public showLibrary() {
+    this.koSidebarViewType("library");
+  }
+
   tabs = ko.observableArray();
+  tabsSideBar = ko.observableArray();
 
   themeCss = ko.computed(() => {
     return ["bootstrap", "bootstrapmaterial"].indexOf(
@@ -861,13 +906,23 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
     });
     this.toolbarItems.push({
       id: "svd-survey-settings",
+      // visible: this.koIsShowDesigner,
+      visible: false,
+      enabled: false,
+      action: () => {
+        this.surveyObjects.selectObject(this.survey);
+        this.showQuestionEditor(this.survey); //POPUP SURVEY SETTINGS
+      },
+      title: this.getLocString("ed.settings")
+    });
+    this.toolbarItems.push({
+      id: "svd-survey-test",
       visible: this.koIsShowDesigner,
       enabled: false,
       action: () => {
         this.surveyObjects.selectObject(this.survey);
-        this.showQuestionEditor(this.survey);
       },
-      title: this.getLocString("ed.settings")
+      title: 'Survey Settings'
     });
     this.toolbarItems.push({
       id: "svd-options",

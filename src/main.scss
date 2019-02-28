@@ -24,6 +24,11 @@
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
     "Helvetica Neue", Arial, sans-serif;
   font-size: 12px;
+  .svd_library {
+    padding: 1.4em;
+    height: 75vh;
+    overflow-y: scroll;
+  }
   #testSurveyPageChanged {
     width: 300px;
     display: inline-block;
@@ -195,7 +200,7 @@
 
       .svd_editors {
         .svd_questions_editor {
-          height: $editor-height;
+          height: $editor-height; 
           overflow-y: scroll;
           padding-top: 18px;
           .empty-message {

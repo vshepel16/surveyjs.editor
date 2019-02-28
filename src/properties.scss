@@ -16,6 +16,7 @@
       border-width: 0;
       border-bottom-width: 1px;
       border-style: solid;
+      height: 75px;
       .svd_custom_select {
         display: inline-block;
         width: calc(100% - 4em);
@@ -27,7 +28,7 @@
     }
     .svd_object_editor {
       padding: 1.4em;
-      height: $editor-height;
+      height: calc(75vh - 75px);
       overflow-y: scroll;
       .form-control {
         border-radius: 0;

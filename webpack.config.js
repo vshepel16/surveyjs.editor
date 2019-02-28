@@ -13,6 +13,7 @@ var svgStoreUtils = require(path.resolve(
   __dirname,
   "./node_modules/webpack-svgstore-plugin/src/helpers/utils.js"
 ));
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 var banner = [
   "surveyjs Builder(Editor) v" + packageJson.version,
@@ -219,6 +220,9 @@ module.exports = function(options) {
       new webpack.BannerPlugin({
         banner: banner
       }),
+      new CopyWebpackPlugin([
+        { from: './package/', to: 'D:/tj/tj_egov/cms/node_modules/surveyjs-editor/' }
+      ], options),
       extractCSS
     ],
     devtool: "inline-source-map"
