@@ -772,12 +772,8 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
       self.doClickToolboxItem(item.json);
     };
     this.dragEnd = function(item, e) {
-      // console.log(item)
-      console.log(self.dragDropHelper.end())
-      console.log(self.dragDropHelper)
       self.dragDropHelper.end();
     };
-
     this.doUndoClick = function() {
       self.doUndoRedo(self.undoRedo.undo());
     };

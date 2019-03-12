@@ -16,7 +16,7 @@ export class SurveyPropertyResultfullEditor extends SurveyPropertyModalEditor {
     this.koItems = ko.observableArray();
     this.createSurvey();
   }
-  public get editorType(): string {
+  public get editorType(): string { 
     return "restfull";
   }
   public get restfullValue() {

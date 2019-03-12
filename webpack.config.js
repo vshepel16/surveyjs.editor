@@ -221,7 +221,8 @@ module.exports = function(options) {
         banner: banner
       }),
       new CopyWebpackPlugin([
-        { from: './package/', to: 'D:/tj/tj_egov/cms/node_modules/surveyjs-editor/' }
+        { from: './package/', to: 'D:/tj/tj_egov/cms/models/packages/public/surveyjs-editor/' }
+        // { from: './package/', to: 'D:/surveyjs_vue_quickstart/node_modules/surveyjs-editor/' }
       ], options),
       extractCSS
     ],
