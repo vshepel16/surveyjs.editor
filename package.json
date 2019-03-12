@@ -14,8 +14,7 @@
     "build_dev": "webpack --env.buildType dev",
     "build_prod": "npm run build_dev && webpack --env.buildType prod",
     "watch_dev": "webpack --env.buildType dev --watch",
-    "build2": "npm run build_dev && webpack --env.buildType prod && cd .. && cd tj && cd tj_egov && cd cms && npm run start",
-    "build": "npm run build_dev && webpack --env.buildType prod && cd .. && cd surveyjs_vue_quickstart && npm run dev"
+    "build": "npm run build_dev && webpack --env.buildType prod && cd .. && cd tj && cd tj_egov && cd cms && npm run start"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
