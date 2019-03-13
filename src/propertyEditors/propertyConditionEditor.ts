@@ -1,10 +1,10 @@
 import * as ko from "knockout";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { SurveyPropertyTextEditor } from "./propertyModalEditor";
 import { SurveyPropertyEditorBase } from "./propertyEditorBase";
 import { SurveyPropertyEditorFactory } from "./propertyEditorFactory";
 import * as editorLocalization from "../editorLocalization";
-import { SurveyValidator } from "survey-knockout";
+import { SurveyValidator } from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { stringLiteral } from "babel-types";
 
 export class SurveyPropertyConditionEditor extends SurveyPropertyTextEditor {

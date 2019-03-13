@@ -1,6 +1,6 @@
 import * as ko from "knockout";
 import { editorLocalization } from "../editorLocalization";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { SurveyObjectProperty } from "../objectProperty";
 import {
   SurveyPropertyEditorBase,

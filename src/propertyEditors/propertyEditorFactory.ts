@@ -1,9 +1,9 @@
 import * as ko from "knockout";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { SurveyPropertyEditorBase } from "./propertyEditorBase";
 import { SurveyPropertyCustomEditor } from "./propertyCustomEditor";
 import { editorLocalization } from "../editorLocalization";
-import { JsonObjectProperty } from "survey-knockout";
+import { JsonObjectProperty } from "surveyjs/packages/survey-knockout/survey.ko.js";
 
 export class SurveyPropertyEditorFactory {
   public static defaultEditor: string = "string";

@@ -1,5 +1,5 @@
 import * as ko from "knockout";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { registerAdorner } from "../surveyjsObjects";
 import { editorLocalization } from "../editorLocalization";
 import { TitleInplaceEditor } from "./title-editor";
@@ -7,7 +7,7 @@ import { SurveyEditor } from "../editor";
 import { getNextValue, findParentNode } from "../utils/utils";
 
 import "./rating-item-editor.scss";
-import { QuestionSelectBase } from "survey-knockout";
+import { QuestionSelectBase } from "surveyjs/packages/survey-knockout/survey.ko.js";
 var templateHtml = require("html-loader?interpolate!val-loader!./rating-item-editor.html");
 
 class RatingItemEditor extends TitleInplaceEditor {

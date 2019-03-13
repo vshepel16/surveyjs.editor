@@ -3,7 +3,7 @@ import { registerAdorner } from "../surveyjsObjects";
 import { editorLocalization } from "../editorLocalization";
 
 import "./title-editor.scss";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 var templateHtml = require("html-loader?interpolate!val-loader!./title-editor.html");
 
 const FRIENDLY_PADDING = 36;

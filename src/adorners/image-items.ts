@@ -1,5 +1,5 @@
 import * as ko from "knockout";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { registerAdorner } from "../surveyjsObjects";
 import { editorLocalization } from "../editorLocalization";
 import Sortable from "sortablejs";
@@ -8,7 +8,7 @@ import { createAddItemElement } from "./item-editor";
 import { getNextValue } from "../utils/utils";
 
 import "./image-items.scss";
-import { QuestionSelectBase } from "survey-knockout";
+import { QuestionSelectBase } from "surveyjs/packages/survey-knockout/survey.ko.js";
 var templateHtml = require("html-loader?interpolate!val-loader!./image-items.html");
 
 class ImageItemInplaceEditor {

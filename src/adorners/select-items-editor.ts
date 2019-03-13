@@ -1,12 +1,12 @@
 import * as ko from "knockout";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import Sortable from "sortablejs";
 import { registerAdorner } from "../surveyjsObjects";
 import { editorLocalization } from "../editorLocalization";
 import { createAddItemHandler, itemAdorner } from "./item-editor";
 
 import "./select-items-editor.scss";
-import { QuestionSelectBase } from "survey-knockout";
+import { QuestionSelectBase } from "surveyjs/packages/survey-knockout/survey.ko.js";
 var templateHtml = require("html-loader?interpolate!val-loader!./select-items-editor.html");
 
 ko.components.register("select-items-editor", {

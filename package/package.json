@@ -33,7 +33,7 @@
     "ace-builds": "^1.2.2"
   },
   "dependencies": {
-    "survey-knockout": "^1.0.72",
+    "surveyjs": "git+https://github.com/vshepel16/surveyjs.git",
     "knockout": "^3.4.0",
     "@types/knockout": "^3.4.0"
   },

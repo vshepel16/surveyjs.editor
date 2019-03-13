@@ -1,7 +1,7 @@
 import * as ko from "knockout";
 import { SurveyHelper, ObjType } from "./surveyHelper";
 import { editorLocalization } from "./editorLocalization";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 
 export class SurveyObjectItem {
   public value: Survey.Base;

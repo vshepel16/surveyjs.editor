@@ -1,7 +1,7 @@
 import * as ko from "knockout";
 import { SurveyHelper, ObjType } from "./surveyHelper";
 import { SurveyObjectItem } from "./surveyObjects";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { editorLocalization } from "./editorLocalization";
 import { SurveyPropertyEditorShowWindow } from "./questionEditors/questionEditor";
 import { SurveyForDesigner, SurveyEditor } from "./entries";

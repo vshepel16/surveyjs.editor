@@ -15,7 +15,7 @@ import {
   SurveyQuestionEditorDefinition,
   ISurveyQuestionEditorDefinition
 } from "./questionEditorDefinition";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import RModal from "rmodal";
 import { SurveyHelper } from "../surveyHelper";
 import { underline } from "chalk";

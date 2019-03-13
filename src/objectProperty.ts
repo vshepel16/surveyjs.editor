@@ -1,5 +1,5 @@
 import * as ko from "knockout";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 
 import {
   SurveyPropertyEditorBase,

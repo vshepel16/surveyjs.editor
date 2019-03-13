@@ -61,7 +61,7 @@ var packagePlatformJson = {
     "ace-builds": "^1.2.2"
   },
   dependencies: {
-    "survey-knockout": "^" + packageJson.version,
+    "surveyjs": "git+https://github.com/vshepel16/surveyjs.git",
     knockout: "^3.4.0",
     "@types/knockout": "^3.4.0"
   },
@@ -203,11 +203,11 @@ module.exports = function(options) {
         commonjs: "knockout",
         amd: "knockout"
       },
-      "survey-knockout": {
+      "surveyjs/packages/survey-knockout/survey.ko.js": {
         root: "Survey",
-        commonjs2: "survey-knockout",
-        commonjs: "survey-knockout",
-        amd: "survey-knockout"
+        commonjs2: "surveyjs/packages/survey-knockout/survey.ko.js",
+        commonjs: "surveyjs/packages/survey-knockout/survey.ko.js",
+        amd: "surveyjs/packages/survey-knockout/survey.ko.js"
       }
     },
     plugins: [
@@ -221,7 +221,7 @@ module.exports = function(options) {
         banner: banner
       }),
       new CopyWebpackPlugin([
-        { from: './package/', to: 'D:/tj/tj_egov/cms/models/packages/public/surveyjs-editor/' }
+        { from: './package/', to: 'D:/tj/tj_egov/cms/node_modules/surveyjs.editor/package' }
         // { from: './package/', to: 'D:/surveyjs_vue_quickstart/node_modules/surveyjs-editor/' }
       ], options),
       extractCSS

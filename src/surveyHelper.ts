@@ -1,6 +1,6 @@
 import { editorLocalization } from "./editorLocalization";
-import * as Survey from "survey-knockout";
-import { Helpers } from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
+import { Helpers } from "surveyjs/packages/survey-knockout/survey.ko.js";
 
 export enum ObjType {
   Unknown,

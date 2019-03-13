@@ -4,9 +4,9 @@ Github: https://github.com/surveyjs/editor
 License: https://surveyjs.io/Licenses#BuildSurvey
 */
 // Dependencies for this module:
-//   ../../../survey-knockout
+//   ../../../surveyjs/packages/survey-knockout/survey.ko.js
 
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 
 import "../utils/custom-checkbox.scss";
 import "../utils/custom-select.scss";

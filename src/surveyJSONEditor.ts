@@ -1,6 +1,6 @@
 import * as ko from "knockout";
 import { SurveyTextWorker } from "./textWorker";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 
 export class SurveyJSONEditor {
   public static updateTextTimeout: number = 1000;

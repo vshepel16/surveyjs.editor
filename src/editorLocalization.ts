@@ -1,5 +1,5 @@
 import { enStrings } from "./localization/english";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 
 export var editorLocalization = {
   currentLocale: "",

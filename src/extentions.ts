@@ -1,4 +1,4 @@
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { SurveyPropertyEditorFactory } from "./propertyEditors/propertyEditorFactory";
 import { SurveyPropertyEditorBase } from "./propertyEditors/propertyEditorBase";
 
