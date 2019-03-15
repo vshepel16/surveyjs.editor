@@ -911,15 +911,6 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
       title: this.getLocString("ed.settings")
     });
     this.toolbarItems.push({
-      id: "svd-survey-test",
-      visible: this.koIsShowDesigner,
-      enabled: false,
-      action: () => {
-        this.surveyObjects.selectObject(this.survey);
-      },
-      title: 'Survey Settings'
-    });
-    this.toolbarItems.push({
       id: "svd-options",
       visible: ko.computed(
         () => this.koIsShowDesigner() && this.koShowOptions()
