@@ -902,9 +902,8 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
     });
     this.toolbarItems.push({
       id: "svd-survey-settings",
-      // visible: this.koIsShowDesigner,
-      visible: false,
-      enabled: false,
+      visible: this.koIsShowDesigner,
+      enabled: true,
       action: () => {
         this.surveyObjects.selectObject(this.survey);
         this.showQuestionEditor(this.survey); //POPUP SURVEY SETTINGS
