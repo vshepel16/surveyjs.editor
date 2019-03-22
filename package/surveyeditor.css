@@ -450,7 +450,7 @@
   user-select: none; }
   .svd_container pages-editor .svd-pages {
     white-space: nowrap;
-    width: calc(100% - 150px);
+    width: calc(100% - 400px);
     letter-spacing: -3px;
     overflow: hidden;
     vertical-align: bottom; }
