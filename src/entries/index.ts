@@ -124,6 +124,9 @@ import "../localization/simplified-chinese";
 import "../localization/spanish";
 import "../localization/traditional-chinese";
 import "../localization/norwegian";
+import "../localization/russian";
+import "../localization/ukrainian";
+import "../localization/tajik";
 
 
 export {

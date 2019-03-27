@@ -1,4 +1,3 @@
-//Uncomment this line on creating a translation file
 //import { editorLocalization, defaultStrings } from "../editorLocalization";
 
 export var enStrings = {
@@ -63,6 +62,8 @@ export var enStrings = {
     generateValidJSON: "Generate Valid JSON",
     generateReadableJSON: "Generate Readable JSON",
     toolbox: "Toolbox",
+    properties: "Properties",
+    library: "Library",
     toolboxGeneralCategory: "General",
     delSelObject: "Delete selected object",
     editSelObject: "Edit selected object",

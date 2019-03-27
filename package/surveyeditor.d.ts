@@ -25,6 +25,9 @@ import "../localization/simplified-chinese";
 import "../localization/spanish";
 import "../localization/traditional-chinese";
 import "../localization/norwegian";
+import "../localization/russian";
+import "../localization/ukrainian";
+import "../localization/tajik";
 
 export declare var enStrings: {
     survey: {
@@ -85,6 +88,8 @@ export declare var enStrings: {
         generateValidJSON: string;
         generateReadableJSON: string;
         toolbox: string;
+        properties: string;
+        library: string;
         toolboxGeneralCategory: string;
         delSelObject: string;
         editSelObject: string;
@@ -593,6 +598,8 @@ export declare var defaultStrings: {
         generateValidJSON: string;
         generateReadableJSON: string;
         toolbox: string;
+        properties: string;
+        library: string;
         toolboxGeneralCategory: string;
         delSelObject: string;
         editSelObject: string;
@@ -3006,4 +3013,7 @@ import "../localization/simplified-chinese";
 import "../localization/spanish";
 import "../localization/traditional-chinese";
 import "../localization/norwegian";
+import "../localization/russian";
+import "../localization/ukrainian";
+import "../localization/tajik";
 

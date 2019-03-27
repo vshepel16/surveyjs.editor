@@ -152,32 +152,20 @@
 
     <div class="svd_toolbox_items">
       <!-- ko foreach: toolbox.koItems -->
-        <!-- ko if: name === 'radiogroup' || 
-                    name === 'checkbox' || 
-                    name === 'text' ||
-                    name === 'boolean' ||
-                    name === 'comment' ||
-                    name === 'html' ||  
-                    name === 'file' ||
-                    name === 'expression' ||
-                    name === 'dropdown' ||
-                    name === 'inputvaluebordered' ||
-                    name === 'customdropdown' -->
-          <div
-            tabindex="0"
-            draggable="true"
-            class="svd_toolbox_item svd-light-border-color"
-            data-bind="css: 'svd_toolbox_item_' + iconName, key2click, clickNoFocus: $root.clickToolboxItem, event:{dragstart: function(el, e) { $root.draggingToolboxItem($data, e); return true;}, dragend: function(el, e) { $root.dragEnd(el, e); }}"
-          >
-            <span data-bind="attr: {title: title}">
-              <svg-icon params="iconName: iconName"></svg-icon>
-            </span>
-            <span
-              class="svd_toolbox_item_text hidden-sm hidden-xs"
-              data-bind="text:title"
-            ></span>
-          </div>
-        <!-- /ko  -->
+        <div
+          tabindex="0"
+          draggable="true"
+          class="svd_toolbox_item svd-light-border-color"
+          data-bind="css: 'svd_toolbox_item_' + iconName, key2click, clickNoFocus: $root.clickToolboxItem, event:{dragstart: function(el, e) { $root.draggingToolboxItem($data, e); return true;}, dragend: function(el, e) { $root.dragEnd(el, e); }}"
+        >
+          <span data-bind="attr: {title: title}">
+            <svg-icon params="iconName: iconName"></svg-icon>
+          </span>
+          <span
+            class="svd_toolbox_item_text hidden-sm hidden-xs"
+            data-bind="text:title"
+          ></span>
+        </div>
       <!-- /ko  -->
     </div>
   </div>

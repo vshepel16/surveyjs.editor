@@ -832,21 +832,21 @@ export class SurveyEditor implements ISurveyObjectEditorOptions {
       this.tabsSideBar([]);
       this.tabsSideBar.push({
         name: "properties",
-        title: 'Properties',
+        title: this.getLocString("ed.properties"),
         template: "se-sidebar-tab-properties",
         data: this,
         action: () => this.showPropertiesEditor()
       });
       this.tabsSideBar.push({
         name: "toolbox",
-        title: 'ToolBox',
+        title: this.getLocString("ed.toolbox"),
         template: "se-sidebar-tab-toolbox",
         data: this,
         action: () => this.showToolbox()
       });
       this.tabsSideBar.push({
         name: "library",
-        title: 'Library',
+        title: this.getLocString("ed.library"),
         template: "se-sidebar-tab-library",
         data: this,
         action: () => this.showLibrary()
