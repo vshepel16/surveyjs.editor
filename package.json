@@ -23,6 +23,7 @@
     "knockout": "^3.4.0",
     "rmodal": "^1.0.28",
     "sortablejs": "1.6.1",
+    "survey-knockout": "^1.0.78",
     "surveyjs": "git+https://github.com/vshepel16/surveyjs.git"
   },
   "devDependencies": {
