@@ -1,5 +1,5 @@
 import * as ko from "knockout";
-import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
+import * as Survey from "survey-knockout";
 import {
   TranslationGroup,
   TranslationItem,
@@ -84,7 +84,7 @@ QUnit.test("get locales", function(assert) {
 });
 QUnit.test("Localization strings editing", function(assert) {
   var question = new Survey.QuestionText("q1");
-  var group = new TranslationGroup(question.name, question);
+  var group = new TranslationGroup(question.name, question, <any>{});
   var item = <TranslationItem>group.items[0];
   question[item.name] = "textEn";
   var valEnglish = item.koValue("");

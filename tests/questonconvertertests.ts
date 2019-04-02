@@ -1,5 +1,5 @@
 import * as ko from "knockout";
-import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
+import * as Survey from "survey-knockout";
 import { QuestionConverter } from "../src/questionconverter";
 
 export default QUnit.module("questionconverter");

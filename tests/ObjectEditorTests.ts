@@ -1,5 +1,5 @@
 import * as ko from "knockout";
-import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
+import * as Survey from "survey-knockout";
 import { SurveyObjectEditor } from "../src/objectEditor";
 import { SurveyObjectProperty } from "../src/objectProperty";
 import { BigCar, Truck, TruckDefaultValue } from "./ObjectEditorTestedClasses";
@@ -225,6 +225,7 @@ class EditorOptionsTests implements ISurveyObjectEditorOptions {
     return false;
   }
   onItemValueAddedCallback(
+    obj: Survey.Base,
     propertyName: string,
     itemValue: Survey.ItemValue,
     itemValues: Array<Survey.ItemValue>
