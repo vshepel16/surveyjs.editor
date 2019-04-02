@@ -1,7 +1,6 @@
 import * as ko from "knockout";
 import { editorLocalization } from "./editorLocalization";
 import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
-// import * as Survey from "survey-knockout";
 import { findParentNode } from "./utils/utils";
 import { StylesManager } from "./stylesmanager";
 

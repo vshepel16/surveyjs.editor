@@ -1,5 +1,5 @@
 import * as ko from "knockout";
-import * as Survey from "survey-knockout";
+import * as Survey from "surveyjs/packages/survey-knockout/survey.ko.js";
 import { applyAdornerClass } from "../src/surveyjsObjects";
 import { titleAdorner } from "../src/adorners/title-editor";
 import { createAddItemHandler } from "../src/adorners/item-editor";
