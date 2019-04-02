@@ -93,8 +93,8 @@ export var ruStrings = {
   },
   //Property Editors
   pe: {
-    apply: "Применить",
-    ok: "Хорошо",
+    apply: "Сохранить",
+    ok: "Сохранить и закрыть",
     cancel: "Отменить",
     reset: "Сброс",
     close: "Закрыть",
