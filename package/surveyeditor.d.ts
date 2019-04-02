@@ -2808,7 +2808,7 @@ export declare class TranslationItem extends TranslationItemBase {
     name: string;
     locString: Survey.LocalizableString;
     defaultValue: string;
-    constructor(name: string, locString: Survey.LocalizableString, defaultValue?: string);
+    constructor(name: string, locString: Survey.LocalizableString, defaultValue: string, translation: ITranslationLocales, context: any);
     readonly text: any;
     koValue(loc: string): any;
     fillLocales(locales: Array<string>): void;
@@ -2818,6 +2818,8 @@ export interface ITranslationLocales {
     koLocales: any;
     showAllStrings: boolean;
     getLocaleName(loc: string): string;
+    availableTranlationsChangedCallback: () => void;
+    tranlationChangedCallback: (locale: string, name: string, value: string, context: any) => void;
 }
 export declare class TranslationGroup extends TranslationItemBase {
     name: any;
@@ -2856,6 +2858,7 @@ export declare class Translation implements ITranslationLocales {
     koMergeLocaleWithDefaultText: any;
     importFinishedCallback: () => void;
     availableTranlationsChangedCallback: () => void;
+    tranlationChangedCallback: (locale: string, name: string, value: string, context: any) => void;
     constructor(survey: Survey.Survey, showAllStrings?: boolean);
     survey: Survey.Survey;
     readonly root: TranslationGroup;
