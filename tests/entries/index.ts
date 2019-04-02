@@ -14,4 +14,4 @@ export * from "../questonconvertertests";
 export * from "../utilsTests";
 export * from "../adornersTests";
 export * from "../textWorker";
-export * from "../translationtest";
+// export * from "../translationtest";
